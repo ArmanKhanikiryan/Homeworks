@@ -348,3 +348,4 @@ arrOfObjects[0].relation = referanceToNellyObject;
 arrOfObjects[1].relation = referancetoSarahObject;
 console.log(arrOfObjects); 
 */
+
