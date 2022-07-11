@@ -123,3 +123,228 @@ resultarr.push(newArr);
 console.log(resultarr);
 var let = 10;
 console.log(let);*/
+
+
+
+
+
+//2- Shabat
+
+//1-xndir
+/*let arr = [2,5,15,50,15213]; 
+function double(arr){ 
+let resultarr = (arr.map((num) => num *2));
+return resultarr;
+}
+console.log(double(arr));
+
+
+//2-xndir
+let arr = [1,2,3,4,5];
+let resultarr = arr.map((num) => num + '');
+console.log(resultarr);
+
+
+//4-xndir
+function namesOnly(arr){
+    let resultarr = [];
+    for(i = 0; i < arr.length; i++){
+        resultarr.push(arr[i].name);
+    }
+    return resultarr;
+}
+
+console.log(namesOnly([
+    {
+        name: "Angelina Jolie",
+        age: 80
+    },
+    {
+        name: "Eric Jones",
+        age: 2
+    },
+    {
+        name: "Paris Hilton",
+        age: 5
+    },
+    {
+        name: "Kayne West",
+        age: 16
+    },
+    {
+        name: "Bob Ziroll",
+        age: 100
+    }
+]));
+
+
+//5-xndir
+function makeStrings(arr){
+    let resultarr = [];
+    for(i = 0; i < arr.length; i++){
+        if(arr[i].age > 19){
+            resultarr.push(arr[i].name + 'Can go to the matrix')
+            continue;
+        }else{
+            resultarr.push(arr[i].name + 'is under age')
+        }
+    }
+    return resultarr;
+}
+
+console.log(makeStrings([
+    {
+        name: "Angelina Jolie",
+        age: 80
+    },
+    {
+        name: "Eric Jones",
+        age: 2
+    },
+    {
+        name: "Paris Hilton",
+        age: 5
+    },
+    {
+        name: "Kayne West",
+        age: 16
+    },
+    {
+        name: "Bob Ziroll",
+        age: 100
+    }
+]));
+
+
+//6- xndir
+let arr = [ -1, -4, -12, -8,-3, -29, -150];
+let result = [];
+if(Array.isArray(arr)){
+result = arr.filter((index) => index > 0).reduce((curr, elem) => curr + elem,0);
+}
+console.log(result);
+//6-- xndir 2 tarberak
+let arr = [ 1, -4, -12, 8,-3, -29, 150];
+let result = 0;
+for(i = 0; i < arr.length; i++) {
+    if(arr[i] > 0){
+        result = result + arr[i];
+    }else if(!Array.isArray(arr)){
+        return 0;
+    }
+}
+console.log(result)
+
+//7- xndir
+
+let arr = [
+    {
+        name: 'John',
+        age: 13
+    },
+    {
+        name: 'Mark',
+        age: 56,
+    },
+    {
+        name: 'Rachel',
+        age: 45,
+    },
+    {
+        name: 'Nate',
+        age: 67,
+    },
+    {
+        name: 'Jeniffer',
+        age: 65,
+    }
+];
+   let arr1 = arr.map((index) => index.age).sort((a,b) => a -b);
+function foo(){
+let arr2 = [];
+let finalarr = [];
+for(i = 0; i < arr1.length; i++) {
+    arr2.push(arr1[0]);
+    arr2.push(arr1[arr1.length - 1]);
+}
+let result = arr2[arr2.length - 1] - arr2[2];
+finalarr.push(arr2[0]);
+finalarr.push(arr2[arr2.length - 1]);
+finalarr.push(result);
+return finalarr;
+}
+console.log(foo(arr1));
+
+//8.xndir
+
+let arr1 = [
+    ['a','b','c'],
+    ['c','d','f'],
+    ['d','f','g']
+    ];
+    let arr = arr1.flat(Infinity);
+    let counts = {};
+arr.forEach((x) => {
+  counts[x] = (counts[x] || 0) + 1;
+});
+console.log(counts); 
+
+
+//9 xndir
+
+
+
+const phoneCountryCodes = {
+    '+374': 'Armenia',
+    '+375': 'Somali',
+    '+376': 'Russia',
+    '+377': 'Hoktemberyan',
+}
+
+const arrOfObjects = [
+    
+    {
+        name: 'sarah',
+        age: 32,
+        phoneNumber: '+374000000',
+        relation: 'nelly'
+    },
+    {
+        name: 'nelly',
+        age: 11,
+        phoneNumber: '+3750020000',
+        relation: 'sarah'
+    }
+];
+
+const referancetoSarahObject = arrOfObjects[0];
+const referanceToNellyObject =  arrOfObjects[1];
+
+for(i = 0; i < arrOfObjects.length; i++){
+    switch (true){
+        case arrOfObjects[i].phoneNumber.substring(0,4) == '+374': {
+            arrOfObjects[i].country = 'Armenia';
+            break;
+        }
+        case arrOfObjects[i].phoneNumber.substring(0,4) == '+375': {
+            arrOfObjects[i].country = 'Somali';
+            break;
+        }
+        case arrOfObjects[i].phoneNumber.substring(0,4) == '+376': {
+            arrOfObjects[i].country = 'Russia';
+            break;
+        }
+        case arrOfObjects[i].phoneNumber.substring(0,4) == '+377': {
+            arrOfObjects[i].country = 'Hoktemberyan';
+            break;
+        }
+    }
+}
+let uppercase = arrOfObjects[0].name.toUpperCase();
+arrOfObjects[0].name = uppercase;
+let uppercase1 = arrOfObjects[1].name.toUpperCase();
+arrOfObjects[1].name = uppercase1;
+arrOfObjects[0].relation = referanceToNellyObject;
+arrOfObjects[1].relation = referancetoSarahObject;
+console.log(arrOfObjects); 
+*/
